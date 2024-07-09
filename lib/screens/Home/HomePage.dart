@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iet_control/screens/Home/AddNewDevice/AddNewDevice.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -21,10 +22,18 @@ class _HomepageState extends State<Homepage> {
           ),
           title: const Text('Large App Bar'),
           actions: <Widget>[
-            IconButton(icon: const Icon(Icons.add_circle), onPressed: () {}),
+            IconButton(
+              icon: const Icon(Icons.add_circle),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AddNewDevice()));
+              },
+            ),
           ],
           expandedHeight: 250,
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.lightBlue[100],
         ),
 
         // Just some content big enough to have something to scroll.
